@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SpringEticaret:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SpringEticaret.war">
+      <element id="artifact" artifact-name="SpringEticaret:war exploded" />
+    </root>
+  </artifact>
+</component>

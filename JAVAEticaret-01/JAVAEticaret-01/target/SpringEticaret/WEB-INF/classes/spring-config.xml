@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+
+    <bean id="proDetDaoImpl" class="com.etc.ycp.dao.ProductsDetDaoImp">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="proDaoImpl" class="com.etc.ycp.dao.ProductsDaoImp">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <bean id="comDaoImpl" class="com.etc.ycp.dao.CommentDaoImp">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.modals.CategoriesEntity</value>
+                <value>com.modals.CommentEntity</value>
+                <value>com.modals.MembersEntity</value>
+                <value>com.modals.OrderDetailsEntity</value>
+                <value>com.modals.OrderStatsEntity</value>
+                <value>com.modals.OrdersEntity</value>
+                <value>com.modals.ProductDetailsEntity</value>
+                <value>com.modals.ProductImagesEntity</value>
+                <value>com.modals.ProductsEntity</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.SQLServer2012Dialect</prop>
+                <prop key="hibernate.current_session_context_class">thread</prop>
+                <prop key="hibernate.connection.url">jdbc:sqlserver://localhost;databaseName=ETicaret01</prop>
+                <prop key="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</prop>
+
+            </props>
+        </property>
+
+    </bean>
+
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name="url" value="jdbc:sqlserver://localhost;databaseName=ETicaret01"/>
+        <property name="username" value="sa"/>
+        <property name="password" value="9741"/>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Eticaret01@localhost">
+  <database-model serializer="dbm" rdbms="MSSQL" format-version="4.2">
+    <root id="1"/>
+    <database id="2" parent="1" name="ETicaret01">
+      <ObjectId>8</ObjectId>
+      <Current>1</Current>
+    </database>
+    <database id="3" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+    </database>
+    <database id="4" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+    </database>
+    <database id="5" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+    </database>
+    <database id="6" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+    </database>
+    <database id="7" parent="1" name="ReportServer">
+      <ObjectId>5</ObjectId>
+    </database>
+    <database id="8" parent="1" name="ReportServerTempDB">
+      <ObjectId>6</ObjectId>
+    </database>
+    <database id="9" parent="1" name="E-ticaret">
+      <ObjectId>7</ObjectId>
+    </database>
+    <database id="10" parent="1" name="uye">
+      <ObjectId>9</ObjectId>
+    </database>
+    <database id="11" parent="1" name="user">
+      <ObjectId>10</ObjectId>
+    </database>
+    <database id="12" parent="1" name="LoginTest">
+      <ObjectId>11</ObjectId>
+    </database>
+    <database id="13" parent="1" name="Login01">
+      <ObjectId>12</ObjectId>
+    </database>
+    <database id="14" parent="1" name="BookManagement">
+      <ObjectId>13</ObjectId>
+    </database>
+    <database id="15" parent="1" name="LoginTest02">
+      <ObjectId>14</ObjectId>
+    </database>
+    <database id="16" parent="1" name="LoginTest03">
+      <ObjectId>15</ObjectId>
+    </database>
+    <database id="17" parent="1" name="UserTest">
+      <ObjectId>16</ObjectId>
+    </database>
+  </database-model>
+</dataSource>
